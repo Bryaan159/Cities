@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Montserrat', sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background:url(../img/background.jpg);
+    /* importante ↓ */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+.logo{
+    width: 200px;
+    cursor: pointer;
+}
+.title{
+    color: #ffffffb3;
+    font-size: 2rem;
+    font-weight: 0;
+    margin-top: 20px;
+    padding-left: 7%;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0px 25px;
+    cursor: pointer;
+}
+nav ul a{
+    color:#ffffffb3;
+    font-size: 17px;
+    letter-spacing: 3px;
+}
+nav ul li:hover{
+    color:white;
+    transition: 0.3s;
+}
+button{
+    background: #191919;
+    padding: 12px 20px;
+    border:2px solid #191919;
+    color:white;
+    font-size: 13px;
+    font-weight: bold;
+    /* importante ↓ */
+    text-transform: uppercase;
+    border-radius: 7px;
+    /* importante ↓ */
+    letter-spacing: 2px;
+}
+button:hover{
+    /* importante ↓ */
+    background: transparent;
+    border: 2px solid #ffffffb3;
+    /* importante ↓ */
+    transform: scale(0.9);
+    /* importante ↓ */
+    transition: .4s;
+    cursor: pointer;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 105px;
+}
+.content h3{
+    display:block;
+    width: 100%;
+    color:#ffffffb3;
+    font-size: 23px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.content h1{
+    /* importante ↓ */
+    display: block;
+    width: 100%;
+    font-size: 108px;
+    color:white;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 25px;
+}
