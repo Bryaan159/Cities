@@ -15,6 +15,7 @@
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>The best places</title>
+
 </head>
 
 <body>
@@ -24,29 +25,72 @@
                 <h3 class="title">Safe World</h3>
             </div>
             <ul>
-                <li>Africa<a href="#"></a></li>
-                <li>Brazil<a href="#"></a></li>
-                <li>Asia<a href="#"></a></li>
-                <li>Australia<a href="#"></a></li>
+                <li><a href="#" onclick="toggleContinent('Africa')">Africa</a></li>
+                <li><a href="#" onclick="toggleContinent('Brazil')">Brazil</a></li>
+                <li><a href="#" onclick="toggleContinent('Asia')">Asia</a></li>
+                <li><a href="#" onclick="toggleContinent('Australia')">Australia</a></li>
             </ul>
-            <button type="button" >Learn More</button>
+            <button type="button">Learn More</button>
         </nav>
 
-        <!-- I created that section for adding information -->
+        <!-- Sección de información sobre los continentes -->
         <div class="content">
             <h3>Wildlife Continents</h3>
-            <h1>Africa</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, cumque impedit error fugit sequi
-                doloribus aperiam <br>officia recusandae
-                , quo beatae vero inventore eius modi.</p>
-            <a href="https://www.youtube.com/watch?v=krI46lvQiYs" class="btn" target="_blank" >Watch More</a>
+            <h1 id="continent-title">Africa</h1>
+            <p id="continent-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, cumque impedit error
+                fugit sequi doloribus aperiam officia recusandae, quo beatae vero inventore eius modi.</p>
+            <a href="https://www.youtube.com/watch?v=krI46lvQiYs" class="btn" target="_blank">Watch More</a>
         </div>
 
         <div class="main-img">
             <img src="img/main.png" alt="africa">
         </div>
+
+        <!-- Información adicional para cada continente -->
+        <div id="asia-info" style="display: none;">
+
+        </div>
+
+        <div id="australia-info" style="display: none;">
+
+        </div>
+
+        <div id="brazil-info" style="display: none;">
+
+        </div>
     </div>
 
+    <script>
+        // Función para cambiar la información al hacer clic en el enlace de cada continente
+        function toggleContinent(continent) {
+            var continentTitle = document.getElementById('continent-title');
+            var continentInfo = document.getElementById('continent-info');
+
+            var asiaInfo = document.getElementById('asia-info');
+            var australiaInfo = document.getElementById('australia-info');
+            var brazilInfo = document.getElementById('brazil-info');
+
+            // Ocultar todos los elementos de información
+            asiaInfo.style.display = 'none';
+            australiaInfo.style.display = 'none';
+            brazilInfo.style.display = 'none';
+
+            // Mostrar información específica según el continente
+            if (continent === 'Asia') {
+                continentTitle.textContent = 'Asia';
+                continentInfo.textContent = 'This is some additional information about Asia that will be shown when you click on the link above.';
+                asiaInfo.style.display = 'block';
+            } else if (continent === 'Australia') {
+                continentTitle.textContent = 'Australia';
+                continentInfo.textContent = 'This is some additional information about Australia that will be shown when you click on the link above.';
+                australiaInfo.style.display = 'block';
+            } else if (continent === 'Brazil') {
+                continentTitle.textContent = 'Brazil';
+                continentInfo.textContent = 'This is some additional information about Brazil that will be shown when you click on the link above.';
+                brazilInfo.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 
 </html>
