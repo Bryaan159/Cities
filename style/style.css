@@ -16,9 +16,18 @@
     background-position: center;
     position: relative;
 }
-/* Nuevos estilos de fondo para cada continente */
+
+/* Estilos de fondo para cada continente */
 .container.asia {
   background-image: url(../img/backgroundAsia.jpg);
+}
+
+.container.australia {
+  background-image: url(../img/backgroundAustralia.jpg);
+}
+
+.container.brazil {
+  background-image: url(../img/backgroundBrasil.png);
 }
 
 nav {
@@ -164,7 +173,7 @@ button:hover {
     transform: translate(-50%, -50%);
 }
 .main-img img{
-    width: 380px;
+    width: 400px;
     height: auto;
 }
 
