@@ -16,6 +16,10 @@
     background-position: center;
     position: relative;
 }
+/* Nuevos estilos de fondo para cada continente */
+.container.asia {
+  background-image: url(../img/backgroundAsia.jpg);
+}
 
 nav {
     display: flex;
